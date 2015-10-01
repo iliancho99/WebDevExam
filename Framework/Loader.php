@@ -20,16 +20,14 @@ final class Loader
                 $file = str_replace('\\', DIRECTORY_SEPARATOR, $class);
                 $file = substr_replace($file, $v, 0, strlen($k)).'.php';
                 $file = realpath($file);
-                echo $file;
                 if($file && is_readable($file)) {
                     include $file;
                 }else{
                     //throw new \Exception();
                 }
+                break;
             }
-            break;
         }
-
     }
 
     public static function registerNamespace($namespace, $path) {
