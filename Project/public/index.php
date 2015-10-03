@@ -6,4 +6,6 @@ $app = \SCart\App::getInstance();
 $app->run();
 $app->getSession()->counter+=1;
 echo $app->getSession()->counter;
+$app->getSession()->saveSession();
+
 

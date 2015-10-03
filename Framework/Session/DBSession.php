@@ -20,7 +20,7 @@ class DBSession extends \SCart\DB\SimpleDB implements \SCart\Session\ISession{
         $this->domain = $domain;
         $this->secure = $secure;
         $this->sessionId = $_COOKIE[$name];
-        if (rand(0, 50) == 1) {
+        if (rand(0, 40) == 1) {
             $this->_gc();
         }
         if (strlen($this->sessionId) < 32) {
