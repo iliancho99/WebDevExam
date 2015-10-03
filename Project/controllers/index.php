@@ -12,6 +12,8 @@ namespace Controllers;
 class Index
 {
     public function index(){
-        echo "Hello controller";
+        $view = \SCart\View::getInstance();
+        $view->username = "Iliancho";
+        $view->display("index");
     }
 }

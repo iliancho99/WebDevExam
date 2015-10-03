@@ -1,7 +1,7 @@
 <?php
 $cnf["default_controller"] = "index";
 $cnf["default_method"] = "index";
-$cnf["namespace"]["Controllers"] = 'C:\Users\Iliyancho\Desktop\WebDevExam\Project\controllers' ;
+$cnf["namespace"]["Controllers"] = '..\controllers' ;
 
 $cnf['session']['autostart'] = true;
 $cnf['session']['type'] = 'database';
