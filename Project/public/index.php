@@ -1,11 +1,10 @@
 <?php
-error_reporting(E_ALL ^ E_NOTICE);
+error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
 include '../../Framework/App.php';
-\SCart\Loader::registerNamespace('Controllers', 'C:\Users\Iliyancho\Desktop\WebDevExam\Project\controllers');
+\SCart\Loader::registerNamespace('Controllers', '..\controllers');
+\SCart\Loader::registerNamespace('models', '..\models');
 $app = \SCart\App::getInstance();
 $app->run();
-$app->getSession()->counter+=1;
-echo $app->getSession()->counter;
-$app->getSession()->saveSession();
+
 
 

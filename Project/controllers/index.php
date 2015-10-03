@@ -14,6 +14,12 @@ class Index
     public function index(){
         $view = \SCart\View::getInstance();
         $view->username = "Iliancho";
-        $view->display("index");
+        if(\SCart\App::getInstance()->getIsLoggedUser()){
+            $view->appendToLayout("body", "loggedUser.index");
+        }else{
+            $view->appendToLayout("body", "index");
+
+        }
+        $view->display("layouts.default");
     }
 }

@@ -5,11 +5,6 @@
  * and open the template in the editor.
  */
 
-/**
- * Description of InputData
- *
- * @author gatakka
- */
 
 namespace SCart;
 

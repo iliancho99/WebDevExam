@@ -34,6 +34,11 @@ class App
         $this->_config = \SCart\Config::getInstance();
     }
 
+    public function getIsGet()
+    {
+        return \SCart\FrontController::getInstance()->isGetRequest;
+    }
+
     public function setConfigFolder($path) {
         $this->_config->setConfigFolder($path);
     }
@@ -122,5 +127,26 @@ class App
         if($this->_session != null){
             $this->_session->saveSession();
         }
+    }
+
+    public function getIsLoggedUser() {
+       return  $this->getSession()->username != null;
+    }
+
+    function addMessage($msg, $type) {
+        if (!$this->getSession()->messages) {
+            $this->getSession()->messages = array();
+        };
+        array_push($this->getSession()->messages,
+            array('text' => $msg, 'type' => $type));
+        var_dump($this->getSession()->messages);
+    }
+
+    public function addInfoMessage($msg) {
+        $this->addMessage($msg, 'info');
+    }
+
+    public function addErrorMessage($msg) {
+        $this->addMessage($msg, 'error');
     }
 }

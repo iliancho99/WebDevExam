@@ -72,7 +72,7 @@ class View
         if ($key && $template) {
             $this->___layoutParts[$key] = $template;
         } else {
-            throw new \Exception('Layout ruqire valid key and tepmplate', 500);
+            throw new \Exception('Layout ruqired valid key and tepmplate', 500);
         }
     }
     private function _includeFile($file) {

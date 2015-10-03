@@ -10,6 +10,7 @@ class FrontController
     private $method = null;
     private $params = Array();
     private $router = null;
+    public $isGetRequest;
 
     /**
      * @return null
@@ -64,7 +65,7 @@ class FrontController
         if($this->router == null){
             throw new \Exception("No valid Router!");
         }
-        $_uri = $this->router->getURI();
+        $_uri = $this->router->GetURI();
         $_rc = null;
 
         $routes = \SCart\App::getInstance()->getConfig()->routes;
@@ -112,6 +113,7 @@ class FrontController
                 $this->controller = $_rc['controllers'][$this->controller]["to"];
             }
         }
+        $this->isGetRequest = $_SERVER['REQUEST_METHOD'] == "GET";
 
         $f = $this->ns.'\\'.ucfirst($this->controller);
         $newController = new $f();

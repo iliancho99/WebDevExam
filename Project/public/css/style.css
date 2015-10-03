@@ -1,0 +1,16 @@
+.homeDiv{
+    text-align: center;
+    margin: 40px;
+    background-color: #bababa;
+    border-radius: 5px;
+    padding: 20px;
+}
+.home{
+    text-align: left;
+}
+.error{
+    background: red;
+}
+.info{
+    background: green;
+}
