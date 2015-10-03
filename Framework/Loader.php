@@ -30,6 +30,16 @@ final class Loader
         }
     }
 
+    public static function registerNameSpaces($ar){
+        if(is_array($ar)){
+            foreach ($ar as  $k=> $v ) {
+                self::registerNamespace($k, $v);
+            }
+        }else{
+            throw new \Exception('Invalid namespaces');
+        }
+    }
+
     public static function registerNamespace($namespace, $path) {
         $namespace = trim($namespace);
         if(strlen($namespace) > 0){
