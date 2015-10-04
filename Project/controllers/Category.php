@@ -24,8 +24,6 @@ class Category
         \SCart\View::getInstance()->categories = $categories;
         \SCart\View::getInstance()->appendToLayout("body", "loggedUser.categoriesView");
         \SCart\View::getInstance()->display("layouts.default");
-
-
     }
 
     public function get(){

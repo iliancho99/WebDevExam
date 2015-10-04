@@ -1,9 +1,9 @@
 <?php
 $cnf["default_controller"] = "index";
 $cnf["default_method"] = "index";
-$cnf["namespace"]["Controllers"] = 'C:\Users\Iliyancho\Desktop\WebDevExam\Project\controllers' ;
-$cnf["namespace"]["Models"] = 'C:\Users\Iliyancho\Desktop\WebDevExam\Project\models' ;
-$cnf["namespace"]["Views"] = 'C:\Users\Iliyancho\Desktop\WebDevExam\Project\views' ;
+$cnf["namespace"]["Controllers"] = '..\controllers' ;
+$cnf["namespace"]["Models"] = '..\models' ;
+$cnf["namespace"]["Views"] = '..\views' ;
 
 $cnf['session']['autostart'] = true;
 $cnf['session']['type'] = 'database';
