@@ -43,4 +43,14 @@ class CategoryModel
         $this->db->prepare("UPDATE `wdbdb`.`products`SET quantity = quantity - 1 WHERE idproduct = ?;");
         return $this->db->execute(array($id));
     }
+
+    public function CashDecreament($username, $cash){
+        $this->db->prepare("UPDATE `wdbdb`.`users`SET `cash` = ? WHERE `username` = ?;SELECT * FROM wdbdb.users;");
+        return $this->db->execute(array($cash, $username));
+    }
+
+    public function AddCategory(\models\bindingmodels\CategoryBindingModel $model){
+        $this->db->prepare("INSERT INTO `wdbdb`.`categories` (`name`)VALUES(?);");
+        return $this->db->execute(array($model->getName()));
+    }
 }

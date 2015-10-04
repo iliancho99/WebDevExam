@@ -58,6 +58,7 @@ class User
             if($r){
                 \SCart\App::getInstance()->getSession()->username =  $_POST["username"];
                 \SCart\App::getInstance()->getSession()->cash = $r[0]["cash"];
+                \SCart\App::getInstance()->getSession()->role = $r[0]["role"];
             }
             var_dump($r);
             \SCart\App::getInstance()->addInfoMessage("Successfully logged");

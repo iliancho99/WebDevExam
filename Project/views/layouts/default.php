@@ -6851,6 +6851,7 @@
                     <li><a href="/"><strong><?= \SCart\App::getInstance()->getSession()->username ?></strong></h4></a></li>
                     <li><a href="/index.php/user/logout">Logout</a></li>
                     <li><a href="/index.php/category">Categories</a></li>
+                    <li><a href="/index.php/cart">Cart</a></li>
                     <li><a href="/"><strong>CASH: <?= \SCart\App::getInstance()->getSession()->cash ?></strong></a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->

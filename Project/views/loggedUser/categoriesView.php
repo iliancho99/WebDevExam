@@ -15,3 +15,7 @@
 
 </table>
 </div>
+
+<?php if(\SCart\App::getInstance()->getSession()->role > 0): ?>
+    <a href="/index.php/category/add" class="left">Add Product</a>
+<?php endif ?>
